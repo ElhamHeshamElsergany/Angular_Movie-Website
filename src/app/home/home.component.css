@@ -1,0 +1,10 @@
+.vote{
+background-color: #24baef;
+padding: 5px;
+font-weight: 900;
+color: #fff;
+}
+.brdr{
+height: 2px;
+background-color: rgba(199, 191, 191, 0.678);
+}

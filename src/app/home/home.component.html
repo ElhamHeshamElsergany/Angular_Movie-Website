@@ -1,0 +1,69 @@
+<app-header [headerTrendingMovies]='trendingMovies'></app-header>
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-4">
+            <div class="brdr my-5 w-25"></div>
+            <h3 class=" text-white ">
+                Trending Movies <br> To Watch Right Now
+            </h3>
+            <h3 class="h4 text-muted ">
+                trending movies to watch right now
+            </h3>
+            <div class="brdr my-5 w-25"></div>
+        </div>
+        <div *ngFor='let movie of trendingMovies' class="col-md-2 position-relative">
+            <div class="movie my-2 position-relative">
+                <a [routerLink] ="['/moviedetails',movie.id]">
+                    <img [src]='imgperfex+movie.poster_path' class="w-100" alt="">
+                    <h2 class="h5 mt-2 text-white">{{movie.title}}</h2>
+                    <div class="vote p-1 position-absolute end-0 top-0">
+                        {{movie.vote_average}}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md-4">
+            <div class="brdr my-5 w-25"></div>
+            <h3 class=" text-white ">
+                Trending TV <br> To Watch Right Now
+            </h3>
+            <h3 class="h4 text-muted ">
+                trendingTV to watch right now
+            </h3>
+            <div class="brdr my-5 w-25"></div>
+        </div>
+        <div *ngFor='let serie of trendingTv' class="col-md-2 position-relative">
+            <div class="serie my-2 position-relative">
+                <a [routerLink]="['/tvdetails' , serie.id]">
+                <img [src]='imgperfex+serie.poster_path' class="w-100" alt="">
+                <h2 class="h5 mt-2 text-white">{{serie.name}}</h2>
+                <div class="vote p-1 position-absolute end-0 top-0">
+                    {{serie.vote_average}}
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md-4">
+            <div class="brdr my-5 w-25"></div>
+            <h3 class=" text-white ">
+                Trending people <br> To Watch Right Now
+            </h3>
+            <h3 class="h4 text-muted ">
+                trending people to watch right now
+            </h3>
+            <div class="brdr my-5 w-25"></div>
+        </div>
+        <div *ngFor='let movie of trendingPerson' class="col-md-2 position-relative">
+            <div class="movie my-2 position-relative">
+                <img [src]='imgperfex+movie.profile_path' class="w-100" alt="">
+                <h2 class="h5 mt-2 text-white">{{movie.name}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

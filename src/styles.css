@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+a:hover{
+    color:brown!important;
+    transition: all .5s ease-in;
+}
+body{
+    background-color: black !important;
+    font-family: 'Nanum Myeongjo', serif;
+    color: white !important;
+
+
+
+}
+

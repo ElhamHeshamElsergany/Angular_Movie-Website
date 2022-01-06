@@ -1,0 +1,16 @@
+<nav class=" bg-transparent text-white py-2 my-3 d-flex justify-content-evenly ">
+    <h2 class="text-danger"> Netflix</h2>
+    <ul class="list-unstyled text-danger d-flex justify-content-between">
+        <li *ngIf='isLogin' class="px-2"> <a routerLink="home"> HOME</a></li>
+        <li *ngIf='!isLogin' class="px-2"><a routerLink="regestration"> SIGNUP</a></li>
+        <li *ngIf='!isLogin' class="px-2"><a routerLink="login"> LOGIN</a></li>
+        <li (click)='logout()' *ngIf='isLogin' class="px-2"><a> LOGOUT</a></li>
+        <li *ngIf='isLogin' class="px-2"><a routerLink="contactUs"> CONTACT US</a></li>
+        <ul class="list-unstyled d-flex" >
+            <li class="mx-3"> <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="mx-3"><a href="https://twitter.com/twitter?lang=ar" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="mx-3"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </ul>
+    
+</nav>
